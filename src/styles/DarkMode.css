@@ -1,0 +1,203 @@
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Navbar */
+body.dark-mode .navbar-toggler {
+  background-color: transparent; 
+  border: none; 
+}
+
+body.dark-mode .navbar-toggler-icon {
+  display: none; 
+}
+
+body.dark-mode .navbar-toggler::before,
+body.dark-mode .navbar-toggler::after,
+body.dark-mode .navbar-toggler span {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 24px;
+  background-color: #ffffff; 
+  margin: 3.35px auto; 
+}
+
+body.dark-mode .navbar-toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0;
+}
+
+body.dark-mode .navbar-container svg {
+  color: #ffffffd9;
+}
+
+body.dark-mode .navbar-container {
+  color: #ffffffd9;
+}
+
+/*Offcanvas*/
+body.dark-mode .offcanvas {
+  background-color: #2b2b2b; 
+  color: #e0e0e0; 
+  border-right: 1px solid #444; 
+}
+
+body.dark-mode .offcanvas-header {
+  border-bottom: 1px solid #444; 
+}
+
+body.dark-mode .offcanvas-header .btn-close {
+  filter: invert(1);
+}
+
+body.dark-mode .offcanvas-title {
+  color: #ffffff; 
+}
+
+body.dark-mode .offcanvas-body {
+  color: #e0e0e0; 
+}
+
+body.dark-mode .offcanvas-body .nav-link {
+  color: #cccccc; 
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .offcanvas-body .nav-link:hover {
+  color: #ffffff; 
+}
+
+
+body.dark-mode #Alert {
+  border: none;
+  border-radius: 0px;
+  border-left: none;
+  border-right: none;
+  background-color: #2b2b2b;
+}
+
+body.dark-mode .menu-container {
+  background-color: #2b2b2b; 
+  color: #e0e0e0; 
+  border: 1px solid #444; 
+}
+
+body.dark-mode header a {
+  color: #ffffffd9;
+}
+
+
+
+
+body.dark-mode .transaction-container {
+  background-color: #2b2b2b;
+}
+
+body.dark-mode .transaction-list .income {
+  background-color: #1f442e; 
+  color: #a3f7a5; 
+}
+
+body.dark-mode .transaction-list .expense {
+  background-color: #552b2b; 
+  color: #f7a5a5; 
+}
+
+body.dark-mode .no-transactions {
+  color: #888; 
+}
+
+body.dark-mode #budgetCard {
+  background:  black;
+  border: 1px solid gray; 
+}
+
+body.dark-mode #card-header {
+  background-color: #2b2b2b;
+  color: #ffffffd9;
+  border: 0.5px solid #444;
+}
+
+body.dark-mode .bank-balance-card .card-header {
+  border: 1px solid gray;
+}
+
+body.dark-mode .bank-balance-card .balance-amount {
+  color: #ffffffd9; 
+}
+
+body.dark-mode .bank-balance-card .account-number {
+  color: #888;
+}
+
+body.dark-mode .budget-section {
+  color: #e0e0e0;
+}
+
+body.dark-mode .budget-section h2 {
+  color: whitesmoke;
+}
+
+body.dark-mode .budget-card {
+  background-color: #2b2b2b;
+  border-color: #444;
+}
+
+body.dark-mode .budget-name,
+body.dark-mode .budget-info {
+  color: #e0e0e0;
+}
+
+/* Modal */
+body.dark-mode .modal-content {
+  background-color: #2b2b2b; 
+  color: #e0e0e0; 
+  border: 1px solid #444; 
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+  border-bottom: 1px solid #444; 
+  color: #ffffff; 
+}
+
+body.dark-mode .modal-title {
+  color: #ffffffd9; 
+}
+
+body.dark-mode .modal-body {
+  color: #e0e0e0; 
+}
+
+body.dark-mode .modal-body .input-group-text {
+  background-color: #444; 
+  color: #e0e0e0; 
+}
+
+body.dark-mode .modal-body .form-control {
+  background-color: #333; 
+  color: #e0e0e0; 
+  border: 1px solid #555; 
+}
+
+body.dark-mode .modal-close-button {
+  color: #e0e0e0; 
+}
+
+body.dark-mode .modal-footer .btn {
+  background-color: #444; 
+  color: #e0e0e0; 
+  border: 1px solid #555; 
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .modal-footer .btn:hover {
+  background-color: #555; 
+}
+

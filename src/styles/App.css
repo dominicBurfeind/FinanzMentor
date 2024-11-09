@@ -1,0 +1,430 @@
+/* Universal */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica;
+  background-color: white;
+}
+
+
+/* Navbar */
+/* Zentriert das Logo und richtet Toggle und Icon auf den Seiten aus */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
+.navbar-container .mx-auto {
+  text-align: center;
+}
+
+.right-icon svg {
+  width: 35px;
+  height: 35px;
+  color: #414141; 
+  transition: 0.3s ease-in-out;
+  margin: 0 20px;
+}
+
+.right-icon svg:hover {
+  cursor: pointer;
+  color: #0cc0df;
+}
+
+/* Bottom Menu */
+.menuBottom {
+  position: fixed;
+  left: 15%;
+  bottom: 50px;
+  z-index: 99;
+}
+
+.menu-container {
+  border-radius: 5px;
+  width: 260px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 3px 15px #80808078;
+  border: 1px solid rgba(128, 128, 128, 0.637);
+}
+
+.menuBottom svg {
+  width: 50px;
+  transition: 0.3s all;
+  cursor: pointer;
+  margin: 0 20px;
+
+}
+
+.menuBottom .svg-container:nth-child(1):hover {
+  color: #25c125;
+}
+
+.menuBottom .svg-container:nth-child(2):hover  {
+  color: red;
+}
+
+.menuBottom .svg-container:nth-child(3):hover  {
+  color: #008600;
+}
+
+/*Menu Bottom Modal*/
+
+/* Modal General Styling */
+.modal-content {
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-content:hover {
+  transform: scale(1.02);
+  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.15), -8px -8px 24px rgba(255, 255, 255, 0.5);
+}
+
+/* Modal Header */
+.modal-header {
+  background-color: #0cc0df;
+  color: white;
+  padding: 15px 20px;
+  border-bottom: none;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 1.35rem;
+  color: white;
+  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header .close {
+  color: white;
+  font-size: 1.25rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.modal-header .close:hover {
+  opacity: 1;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Form Control Styling */
+.form-control {
+  background-color: #f3f4f6;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(12, 192, 223, 0.6);
+  background-color: #ffffff;
+}
+
+.form-control[required]:invalid {
+  border: 2px solid red; /* Red border for required field validation */
+}
+
+/* Label Styling */
+.form-label {
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* Modal Footer Styling */
+.modal-footer {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-top: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Button Styling */
+.modal-footer .btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+}
+
+.modal-footer .btn-primary {
+  background-color: #0cc0df;
+  color: white;
+  border: none;
+  font-weight: 500;
+  box-shadow: 0px 4px 12px rgba(12, 192, 223, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #099fb7;
+}
+
+.modal-footer .btn-primary:active {
+  box-shadow: 0px 4px 12px rgba(12, 192, 223, 0.6);
+}
+
+.modal-footer .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(12, 192, 223, 0.6), 0 0 20px rgba(12, 192, 223, 0.4), 0 0 30px rgba(12, 192, 223, 0.3);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(12, 192, 223, 0.8), 0 0 30px rgba(12, 192, 223, 0.5), 0 0 40px rgba(12, 192, 223, 0.4);
+  }
+}
+
+
+/*Alert*/
+#Alert {
+  background-color: #292929;
+  color: white;
+  font-weight: 200;
+  font-size: 10px;
+  border-radius: 0px;
+  border-left: none;
+  border-right: none;
+}
+
+
+
+
+/* Main Budget Container */
+.bank-balance-card {
+  width: 100%;
+  border-radius: 8px;
+  margin: 30px auto;
+}
+
+#budgetContainerContainer {
+  margin: 30px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.balance-amount {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #292929;
+  margin-top: 10px;
+}
+
+.account-number {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+#card-header {
+  background-color: #0cc0df;
+  border: 1px solid #0000009e;
+  font-size: 1.1rem;
+}
+
+
+/*Transaktions container*/
+.transaction-container {
+  width: 100vw;
+  margin: 50px auto;
+  padding: 50px 5px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.transaction-container h2 {
+  margin: 50px 40px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.transaction-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaction-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.transaction-list .income {
+  color: green;
+  background-color: #e6ffe6;
+}
+
+.transaction-list .expense {
+  color: red;
+  background-color: #ffe6e6;
+}
+
+.no-transactions {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
+
+/* Budget Liste */
+.budget-section {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--light-background);
+  color: var(--text-color);
+}
+
+.budget-section .section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #292929;
+  margin: 50px 0;
+  text-align: center;
+}
+.budget-card {
+  width: 90%;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.budget-card:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.budget-card-body {
+  position: relative;
+  padding-bottom: 20px; /* Adjust to give extra space */
+}
+
+.budget-description {
+  margin-top: 15px; /* Space between progress bar and description */
+  padding: 10px;
+  border-top: 1px solid #e0e0e0; /* Light border for separation */
+  color: #333; /* Darker text for readability */
+  background: #f9f9f9;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.placeholder-text {
+  font-size: 1rem;
+  color: #6c757d;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.placeholder-text {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
+
+
+
+
+
+/*Homepage Container*/
+/*Header */
+.home-header h1 {
+  padding: 2% 10%;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-header a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+.top-header a svg {
+  margin: 5px 0;
+}
+
+#budgetErstellen,
+#budgetListe {
+  margin: 0 15px;
+  font-size: 8.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#budgetErstellen:hover,
+#budgetListe:hover {
+  color: #0cc0df;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
